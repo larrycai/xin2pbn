@@ -14,11 +14,6 @@
 %Font:FixedPitch "Courier New",10,400,0
 %Font:HandRecord "Arial",11,400,0
 %GutterSize 500,500
-%HRTitleDate 0
-%HRTitleEvent ""
-%HRTitleSetID ""
-%HRTitleSetIDPrefix ""
-%HRTitleSite ""
 %HtmlClubs entity,"https://bridgecomposer.com/suitimg/c.gif"
 %HtmlDiamonds entity,"https://bridgecomposer.com/suitimg/d.gif"
 %HtmlHearts entity,"https://bridgecomposer.com/suitimg/h.gif"
@@ -56,3 +51,4 @@
 $auction
 [Play "$leader"]
 $play
+
