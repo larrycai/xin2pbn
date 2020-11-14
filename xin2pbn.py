@@ -54,6 +54,10 @@ def playlog2play(playlog):
             play = play + show_play(leader,round) + "\n"
     return play
 
+def fixcontract(contract):
+# 3NX => 3NTX for PBNJview
+    return contract.replace("N","NT")
+
 def xin2pbn(url, output):
     #print("wahtttttttt")
     #print(url)
@@ -66,6 +70,7 @@ def xin2pbn(url, output):
     all["leader"] = DECLARE2LEADER[all["declarer"]]
     all["auction"] = bidlog2auction(all["bidlog"])
     all["play"] = playlog2play(all["playlog"])
+    all["contract"] = fixcontract(all["contract"])
     with open('template.pbn') as filein:
         src = Template(filein.read())
         result = src.safe_substitute(all)

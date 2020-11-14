@@ -13,8 +13,12 @@ for example, if there is bridge played like [this](http://www.xinruibridge.com/d
 
 # Development
 
+````
     docker run -it -v $PWD:/code -w /code larrycai/xin2pbn /code/xin2pbn.py "<URL>"
-    
+    docker run -it --entrypoint ash -v $PWD:/app  -w /app larrycai/xin2pbn
+    # ./generatepbn.py index.html
+    # cat pbn/*.pbn > all.pbn
+````
 
 
 <TODO>
