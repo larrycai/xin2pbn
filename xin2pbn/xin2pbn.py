@@ -133,7 +133,7 @@ def generate_pbn_from_html(html_files):
         if file.endswith(".html") or file.endswith(".htm"):
             check_file(file)
 
-if __name__ == '__main__':
+def main():
     # print(sys.argv)
     if len(sys.argv) > 1:
         param = sys.argv[1:]
@@ -143,3 +143,6 @@ if __name__ == '__main__':
             generate_pbn_from_html(param)
     else:
         print("xin2pbn.py <url>|<html>")
+
+if __name__ == '__main__':
+    main()

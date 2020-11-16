@@ -14,7 +14,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="xin2pbn", # Replace with your own username
-    version="0.1.0",
+    version="0.1.3",
     author="Larry Cai",
 	author_email='larry.caiyu@gmail.com',
 	url='https://github.com/larrycai/xin2pbn',
@@ -30,6 +30,6 @@ setuptools.setup(
     ],
     entry_points = {
         'console_scripts': ['xin2pbn=xin2pbn.xin2pbn:main'],
-    }
+    },
     python_requires='>=3.6',
 )
