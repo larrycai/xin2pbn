@@ -34,12 +34,12 @@ $ cat 1-cha*.pbn > all.pbn
 
 original source in xinrui UI
 
-![](xinrui.png | width=200)
+![](xinrui.png)
 
 The outputed pbn can be viewed inside bridgecomposer & pbnjview
 
-![](bridgecomposer.png | width=200)
-![](pbnjview.png | width=200)
+![](bridgecomposer.png)
+![](pbnjview.png)
 
 # Development
 
@@ -60,3 +60,4 @@ The outputed pbn can be viewed inside bridgecomposer & pbnjview
 
 * http://www.tistis.nl/pbn/
 * http://xinruibridge.com/
+* http://bridgecomposer.com/
