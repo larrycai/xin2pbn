@@ -5,6 +5,7 @@ import io
 import re
 import sys
 import json
+import pkgutil
 
 from urllib.parse import urlparse
 from string import Template
@@ -14,7 +15,7 @@ from collections import deque
 url="http://www.xinruibridge.com/deallog/DealLog.html?bidlog=P%3B1N,P,4D,P%3B4H,P,4N,P%3B5H,P,5N,P%3B6C,P,6D,P%3B7H,P,P,P%3B&playlog=W:2H,5H,3H,9H%3BS:KC,8C,2C,4C%3BS:5C,JC,AC,3C%3BN:6C,9C,AH,QC%3BS:3D,8D,AD,2D%3BN:KH,3S,4D,4H%3BN:QH,8S,4S,8H%3BN:JH,9S,6D,TH%3BN:7H,5D,5S,7D%3BN:6H,TS,JD,TD%3BN:JS,QS,KS,2S%3BS:&deal=QT983.3.Q52.T943%20AK654.A9.J643.K5%2072.T842.KT87.QJ8%20J.KQJ765.A9.A762&vul=EW&dealer=E&contract=7H&declarer=S&wintrick=13&score=1510&str=%E9%94%A6%E6%A0%87%E8%B5%9B%20%E7%AC%AC1%E8%BD%AE%20%E7%89%8C%E5%8F%B7%206/8&dealid=440219531&pbnid=133129440"
 
 dir="."
-PBN_FILE="output.pbn"
+PBN_FILE="output"
 
 DECLARE2LEADER={"E":"S","S":"W","W":"N","N":"E"}
 def bidlog2auction(bidlog):
@@ -77,34 +78,15 @@ def xin2pbn(url, output):
     all["auction"] = bidlog2auction(all["bidlog"])
     all["play"] = playlog2play(all["playlog"])
     all["contract"] = fixcontract(all["contract"])
-    with open('template.pbn') as filein:
-        src = Template(filein.read())
-        result = src.safe_substitute(all)
-        output = output + ".pbn"
-        with io.open(output, "w", encoding="utf-8") as text_file:
-            print("write to file %s" % output)
-            text_file.write(result)
-
-def generate_from_url(url):
-    # print(url)
-    o = urlparse(url)
-    #print(o.query)
-    #all = o.query.split("&")
-    all = urllib.parse.parse_qs(o.query)
-    #print(all)
-    for k in all:
-        all[k] = all[k][0]
-    # print(all)
-    all["leader"] = DECLARE2LEADER[all["declarer"]]
-    all["auction"] = bidlog2auction(all["bidlog"])
-    all["play"] = playlog2play(all["playlog"])
-    with open('template.pbn') as filein:
-        src = Template(filein.read())
-        result = src.safe_substitute(all)
-        output = PBN_FILE
-        with io.open(output, "w", encoding="utf-8") as text_file:
-            print("write to file %s" % output)
-            text_file.write(result)
+    template = pkgutil.get_data(__name__,'template.pbn')
+    #with open('template.pbn') as filein:
+    #    src = Template(filein.read())
+    src = Template(template.decode('utf-8'))
+    result = src.safe_substitute(all)
+    output = output + ".pbn"
+    with io.open(output, "w", encoding="utf-8") as text_file:
+        print("write to file %s" % output)
+        text_file.write(result)
 
 # <a href="http://www.xinruibridge.com/....">....</a>
 def get_xinruiurl(file):
@@ -138,7 +120,7 @@ def main():
     if len(sys.argv) > 1:
         param = sys.argv[1:]
         if param[0].startswith("http"):
-            generate_from_url(param[0])
+            xin2pbn(param[0], PBN_FILE)
         else:
             generate_pbn_from_html(param)
     else:
