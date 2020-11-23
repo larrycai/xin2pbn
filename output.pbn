@@ -32,7 +32,7 @@
 %TSTReport List
 %TSTReportOrder ByNumber
 %TSTReportShade Yes
-[Event "锦标赛 第12轮 牌号 4/12"]
+[Event "群组IMP赛 20201121 牌号 2/8"]
 [Site ""]
 [Date ""]
 [Board ""]
@@ -40,15 +40,27 @@
 [North ""]
 [East ""]
 [South ""]
-[Dealer "W"]
-[Vulnerable "All"]
-[Deal "W:.K5.QJT832.AK976 KQ874.AT8.76.Q53 JT652.7642.5.T82 A93.QJ93.AK94.J4"]
-[Scoring "-200"]
-[Declarer "N"]
-[Contract "4SX"]
-[Result "9"]
-[Auction "W"]
-1D 1S Pass
-[Play "E"]
-D5 DK D2 D6
+[Dealer "E"]
+[Vulnerable "NS"]
+[Deal "E:T96.A62.J975.985 KQ832.954.T.Q732 AJ754.T8.K842.K4 .KQJ73.AQ63.AJT6"]
+[Scoring "620"]
+[Declarer "S"]
+[Contract "5C"]
+[Result "12"]
+[Auction "E"]
+Pass Pass 1S X
+2S Pass Pass X
+Pass 3C Pass 4C
+Pass 5C Pass Pass
+Pass
+[Play "W"]
+HT HK HA H4
+SA C6 ST SK
+H8 H3 H2 H9
+DK DA D7 DT
+D2 D3 D9 C2
+C4 CT C5 C3
+D4 D6 D5 CQ
+CK CA C8 C7
+
 
