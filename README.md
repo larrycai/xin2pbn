@@ -45,7 +45,7 @@ The outputed pbn can be viewed inside bridgecomposer & pbnjview
 
 ````
 # docker run -it  -v $PWD:/app  -w /app python:3.8  bash
-# python3 -m pip install --user --upgrade twine
+# python3 -m pip install --user --upgrade twine wheel
 # python3 setup.py sdist clean
 # rm -rf dist
 # python3 setup.py sdist bdist_wheel
