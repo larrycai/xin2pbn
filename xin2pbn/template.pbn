@@ -7,12 +7,12 @@
 %BoardsPerPage 1
 %CardTableColors #008000,#ffffff,#aaaaaa
 %EventSpacing 0
-%Font:CardTable "Verdana",10,400,0
-%Font:Commentary "Verdana",10,400,0
-%Font:Diagram "Verdana",10,400,0
-%Font:Event "@微软雅黑",10,400,0
+%Font:CardTable "Arial",11,400,0
+%Font:Commentary "Times New Roman",12,400,0
+%Font:Diagram "Times New Roman",12,400,0
+%Font:Event "Times New Roman",12,400,0
 %Font:FixedPitch "Courier New",10,400,0
-%Font:HandRecord "Verdana",10,400,0
+%Font:HandRecord "Arial",11,400,0
 %GutterSize 500,500
 %HtmlClubs entity,"https://bridgecomposer.com/suitimg/c.gif"
 %HtmlDiamonds entity,"https://bridgecomposer.com/suitimg/d.gif"
