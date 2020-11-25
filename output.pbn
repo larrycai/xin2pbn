@@ -1,19 +1,25 @@
 % PBN 2.1
 % EXPORT
 %Content-type: text/x-pbn; charset=UTF-8
-%Creator: xin2pbn.py
-%Created: Sun Apr  1 21:55:24 2018 +0200
+%Creator: BridgeComposer Version 5.72
+%Created: Wed Nov 25 07:42:48 2020 +0100
+%BCOptions Center STBorder STShade
 %BidAndCardSpacing Thin
 %BoardsPerPage 1
 %CardTableColors #008000,#ffffff,#aaaaaa
 %EventSpacing 0
-%Font:CardTable "Arial",11,400,0
-%Font:Commentary "Times New Roman",12,400,0
-%Font:Diagram "Times New Roman",12,400,0
-%Font:Event "Times New Roman",12,400,0
+%Font:CardTable "Verdana",10,400,0
+%Font:Commentary "Verdana",10,400,0
+%Font:Diagram "Verdana",10,400,0
+%Font:Event "@微软雅黑",10,400,0
 %Font:FixedPitch "Courier New",10,400,0
-%Font:HandRecord "Arial",11,400,0
+%Font:HandRecord "Verdana",10,400,0
 %GutterSize 500,500
+%HRTitleDate 0
+%HRTitleEvent "群组IMP赛 20201117 牌号 3/8"
+%HRTitleSetID ""
+%HRTitleSetIDPrefix ""
+%HRTitleSite ""
 %HtmlClubs entity,"https://bridgecomposer.com/suitimg/c.gif"
 %HtmlDiamonds entity,"https://bridgecomposer.com/suitimg/d.gif"
 %HtmlHearts entity,"https://bridgecomposer.com/suitimg/h.gif"
@@ -32,7 +38,7 @@
 %TSTReport List
 %TSTReportOrder ByNumber
 %TSTReportShade Yes
-[Event "群组IMP赛 20201121 牌号 2/8"]
+[Event "群组IMP赛 20201117 牌号 3/8"]
 [Site ""]
 [Date ""]
 [Board ""]
@@ -40,27 +46,25 @@
 [North ""]
 [East ""]
 [South ""]
-[Dealer "E"]
-[Vulnerable "NS"]
-[Deal "E:T96.A62.J975.985 KQ832.954.T.Q732 AJ754.T8.K842.K4 .KQJ73.AQ63.AJT6"]
-[Scoring "620"]
-[Declarer "S"]
-[Contract "5C"]
-[Result "12"]
-[Auction "E"]
-Pass Pass 1S X
-2S Pass Pass X
-Pass 3C Pass 4C
-Pass 5C Pass Pass
-Pass
-[Play "W"]
-HT HK HA H4
-SA C6 ST SK
-H8 H3 H2 H9
-DK DA D7 DT
-D2 D3 D9 C2
-C4 CT C5 C3
-D4 D6 D5 CQ
-CK CA C8 C7
-
-
+[Dealer "S"]
+[Vulnerable "EW"]
+[Deal "S:JT6.9864.Q92.AQ7 AQ987.AKQT.T6.T4 K532.J.AKJ75.KJ6 4.7532.843.98532"]
+[Scoring "130"]
+[Declarer "N"]
+[Contract "4D"]
+[Result "10"]
+[BCFlags "1f"]
+[Auction "S"]
+Pass 1S 2D Pass
+3D 3H 4D Pass
+Pass Pass
+[Play "E"]
+S4 SJ SA S3
+H2 H4 HK HJ
+H3 H6 HA D5
+D3 D2 D6 DA
+D8 DQ DT D7
+H5 H9 HT DK
+C2 CQ CT C6
+H7 H8 HQ DJ
+C3 CA C4 CJ
