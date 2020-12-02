@@ -68,7 +68,7 @@ def fixcontract(contract):
 def xin2pbn(src_url, output):
     #print("wahtttttttt")
     #print(url)
-    url = src_url.replace(";","%3B")
+    url = src_url.replace("&amp;","&").replace(";","%3B")
     o = urlparse(url)
     all = urllib.parse.parse_qs(o.query)
     #print(all)
