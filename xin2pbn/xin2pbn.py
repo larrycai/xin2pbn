@@ -65,9 +65,10 @@ def fixcontract(contract):
 # 3NX => 3NTX for PBNJview
     return contract.replace("N","NT")
 
-def xin2pbn(url, output):
+def xin2pbn(src_url, output):
     #print("wahtttttttt")
     #print(url)
+    url = src_url.replace(";","%3B")
     o = urlparse(url)
     all = urllib.parse.parse_qs(o.query)
     #print(all)
