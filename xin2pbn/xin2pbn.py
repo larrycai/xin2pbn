@@ -17,7 +17,7 @@ url="http://www.xinruibridge.com/deallog/DealLog.html?bidlog=P%3B1N,P,4D,P%3B4H,
 dir="."
 PBN_FILE="output"
 
-DECLARE2LEADER={"E":"S","S":"W","W":"N","N":"E"}
+DECLARE2LEADER={"E":"S","S":"W","W":"N","N":"E"," ":" "}
 def bidlog2auction(bidlog):
 # 'P;1N,P,4D,P;4H,P,4N,P;5H,P,5N,P;6C,P,6D,P;7H,P,P,P;'
     str = bidlog.replace(","," ") \
@@ -77,7 +77,10 @@ def xin2pbn(src_url, output):
     #print(all)
     all["leader"] = DECLARE2LEADER[all["declarer"]]
     all["auction"] = bidlog2auction(all["bidlog"])
-    all["play"] = playlog2play(all["playlog"])
+    if "playlog" in all:
+        all["play"] = playlog2play(all["playlog"])
+    else:
+        all["play"] = ""
     all["contract"] = fixcontract(all["contract"])
     template = pkgutil.get_data(__name__,'template.pbn')
     #with open('template.pbn') as filein:
