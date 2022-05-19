@@ -20,12 +20,19 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - name: Hello action step
+      id: hello
+      uses: larrycai/hello-action@main
+      with:
+        who-to-greet: 'Larry Cai'
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v3
       with:
         python-version: ${{ matrix.python-version }}
     - name: Install dependencies
       run: |
+        pwd
+        mount
         python -m pip install --upgrade pip
         pip install flake8 pytest pytest-cov
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
