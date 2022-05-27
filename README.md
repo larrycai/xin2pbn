@@ -1,6 +1,6 @@
 # xin2pbn
 
-** !! Deprecated, this module is moved into [bridge-utils](https://gitlab.com/xrgopher/bridge-utils) since 2022.05.27, all features are kept **
+**==> Deprecated, this module is moved into [bridge-utils](https://gitlab.com/xrgopher/bridge-utils) since 2022.05.27, all features are kept**
 
 ````
 $ pip uninstall xin2pbn
