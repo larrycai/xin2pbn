@@ -1,5 +1,12 @@
 # xin2pbn
 
+** !! Deprecated, this module is moved into [bridge-utils](https://gitlab.com/xrgopher/bridge-utils) since 2022.05.27, all features are kept **
+
+````
+$ pip uninstall xin2pbn
+$ pip install bridge-utils
+````
+
 xinrui bridge online url to pbn converter
 
 xinrui url looks like [this](http://www.xinruibridge.com/deallog/DealLog.html?bidlog=P%3BP,1S,X,2S%3BP,P,X,P%3B3C,P,4C,P%3B5C,P,P,P%3B&playlog=W:TH,KH,AH,4H%3BE:TS,KS,AS,6C%3BN:3H,2H,9H,8H%3BS:TD,KD,AD,7D%3BN:3D,9D,2C,2D%3BS:3C,4C,TC,5C%3BN:6D,5D,QC,4D%3BS:7C,KC,AC,8C%3BN:&deal=T96.A62.J975.985%20KQ832.954.T.Q732%20AJ754.T8.K842.K4%20.KQJ73.AQ63.AJT6&vul=NS&dealer=E&contract=5C&declarer=S&wintrick=12&score=620&str=%E7%BE%A4%E7%BB%84IMP%E8%B5%9B%2020201121%20%E7%89%8C%E5%8F%B7%202/8&dealid=984602529&pbnid=344008254), it can be converted to standard pbn files [output.pbn](output.pbn)
